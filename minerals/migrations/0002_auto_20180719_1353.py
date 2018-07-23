@@ -11,7 +11,7 @@ def create_minerals(apps, schema_editor):
 	for mineral in data:
 		Mineral.objects.create(
 			name = mineral.get('name', ''),
-			img_filename = mineral.get('image filename', 'YOMAMA'),
+			img_filename = mineral.get('name') + '.jpg',
 			img_caption = mineral.get('image caption', ''),
 			category = mineral.get('category', ''),
 			formula = mineral.get('formula', ''),
