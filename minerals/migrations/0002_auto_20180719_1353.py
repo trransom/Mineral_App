@@ -11,24 +11,24 @@ def create_minerals(apps, schema_editor):
 	for mineral in data:
 		Mineral.objects.create(
 			name = mineral.get('name', ''),
-            img_filename = mineral.get('image_filename', ''),
-            img_caption = mineral.get('image_caption', ''),
-            category = mineral.get('category', ''),
-            formula = mineral.get('formula', ''),
-            strunz_class = mineral.get('strunz_classification', ''),
-            color = mineral.get('color', ''),
-            crystal_sys = mineral.get('crystal_system', ''),
-            unit_cell = mineral.get('unit_cell', ''),
-            crystal_sym = mineral.get('crystal_symmetry', ''),
-            cleavage =  mineral.get('cleavage', ''),
-            mohs = mineral.get('mohs_scale_hardness', ''),
-            luster = mineral.get('luster', ''),
-            streak = mineral.get('streak', ''),
-            diaphaneity = mineral.get('diaphaneity', ''),
-            optical_prop = mineral.get('optical_properties', ''),
-            refractive_inx = mineral.get('refractive_index', ''),
-            crystal_habit = mineral.get('crystal_habit', ''),
-            spec_gravity =  mineral.get('specific_gravity', '')
+			img_filename = mineral.get('image filename', 'YOMAMA'),
+			img_caption = mineral.get('image caption', ''),
+			category = mineral.get('category', ''),
+			formula = mineral.get('formula', ''),
+			strunz_class = mineral.get('strunz classification', ''),
+			color = mineral.get('color', ''),
+			crystal_sys = mineral.get('crystal system', ''),
+			unit_cell = mineral.get('unit cell', ''),
+			crystal_sym = mineral.get('crystal symmetry', ''),
+			cleavage =  mineral.get('cleavage', ''),
+			mohs = mineral.get('mohs scale hardness', ''),
+			luster = mineral.get('luster', ''),
+			streak = mineral.get('streak', ''),
+			diaphaneity = mineral.get('diaphaneity', ''),
+			optical_prop = mineral.get('optical properties', ''),
+			refractive_inx = mineral.get('refractive index', ''),
+			crystal_habit = mineral.get('crystal habit', ''),
+			spec_gravity =  mineral.get('specific gravity', '')
 		)
 
 class Migration(migrations.Migration):
