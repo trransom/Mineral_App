@@ -1,8 +1,0 @@
-<!DOCTYPE html>
-<html>
-<body>
-{% for mineral in minerals %}
-<a href="{% url 'detail' pk=mineral.pk %}">{{ mineral.name }}</a>
-{% endfor %}
-</body>
-</html>
