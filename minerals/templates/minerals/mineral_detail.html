@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 {% load static %}
-{% block name %}{{ mineral.name }}{% endblock %}
 {% block content %}
 <html>
 <title>Mineral Details</title>
 </head>
 <body>
-<main>
-<article>
-	<p><b>Name</b></p>
-	<h2>{{ mineral.name }}</h2>
-	<img src="{% static 'images/{{ mineral.img_filename }}' %}" alt="Mineral Title" height="100px" width="100px">
-</article>
-{% endblock %}
-</main>
+	<main>
+	<article>
+		<h2>{{ mineral.name }}</h2>
+		<h3>{{ mineral.img_caption }}</h3>
+		<img src="{% static 'images' %}/{{ mineral.img_filename }}" alt="{{ mineral.img_filename }}" height="100px" width="100px">
+		<p><b>Category</b>: {{ mineral.category }}</p>
+		<p><b>Formula</b>: {{ mineral.formula }}</p>
+		<p><b>Strunz Class</b>: {{ mineral.strunz_class }}</p>
+		<p><b>Color</b>: {{ mineral.color }}</p>
+		<p><b>Crystal System</b>: {{ mineral.crystal_sys }}</p>
+		<p><b>Unit Cell</b>: {{ mineral.unit_cell }}</p>
+		<p><b>Crystal Symmetry</b>: {{ crystal_sym }}</p>
+		<p><b>Cleavage</b>: {{ mineral.cleavage }}</p>
+		<p><b>Mohs Scale Hardness</b>: {{ mineral.mohs }}</p>
+		<p><b>Luster</b>: {{ mineral.luster }}</p>
+		<p><b>Streak</b>: {{ mineral.streak }}</p>
+		<p><b>Diaphaneity</b>: {{ mineral.diaphaneity }}</p>
+		<p><b>Optical Properties</b>: {{ mineral.optical_prop }}</p>
+		<p><b>Refractive Index</b>: {{ mineral.refractive_inx }}</p>
+		<p><b>Crystal Habit</b>: {{ mineral.crystal_hab }}</p>
+		<p><b>Specific Gravity</b>: {{ mineral.spec_grav }}</p>
+	</article>
+	{% endblock %}
+	</main>
 </body>
 </html>
