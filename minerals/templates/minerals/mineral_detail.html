@@ -10,7 +10,7 @@
 <article>
 	<p><b>Name</b></p>
 	<h2>{{ mineral.name }}</h2>
-	<img src="{% static '/images/Chrysocolla.jpg' %}" alt="Mineral Title" height="100px" width="100px">
+	<img src="{% static 'images/{{ mineral.img_filename }}' %}" alt="Mineral Title" height="100px" width="100px">
 </article>
 {% endblock %}
 </main>
