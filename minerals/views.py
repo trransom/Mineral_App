@@ -2,10 +2,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 
-from .models import Mineral
-
-def home(request):
-	return render(request, 'minerals/home.html')
+from .models import Minerals
 
 def index(request):
 	minerals = Mineral.objects.all()
