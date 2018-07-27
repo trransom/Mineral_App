@@ -1,8 +1,17 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends 'minerals/layout.html' %}
+
+{% load static %}
+
+{% block title %}Minerals{% endblock %}
+{% block content %}
+<div class="minerals__container">
+
 {% for mineral in minerals %}
-<a href="{% url 'detail' pk=mineral.pk %}">{{ mineral.name }}</a>
+		<div class="minerals__anchor"><a href="{% url 'detail' pk=mineral.pk %}">{{ mineral.name }}</a>
+<!--			{% if forloop.counter|divisibleby:"3" and not forloop.last %}
+			</div><div class="row">
+			{% endif %}-->
+			</div>
 {% endfor %}
-</body>
-</html>
+</div>
+{% endblock %}

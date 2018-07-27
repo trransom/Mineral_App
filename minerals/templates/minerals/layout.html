@@ -1,9 +1,19 @@
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{% block title %}Mucho Minerals{% endblock %}</title>
+		<title>Multitude of Minerals</title>
+		<link rel="stylesheet" href="{% static 'assets/css/global.css' %}">
 	</head>
+	
+	
+	
+	
 	<body>
+	<div class="logo">
+		<header class="logo__name">{% block title %}Multitude of Minerals{% endblock %}</header>
+		<img></img>
+	</div>
 	{% block content %}{% endblock %}
 	</body>
 </html>
