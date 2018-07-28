@@ -2,15 +2,11 @@
 
 {% load static %}
 
-{% block title %}Minerals{% endblock %}
 {% block content %}
 <div class="minerals__container">
 
 {% for mineral in minerals %}
 		<div class="minerals__anchor"><a href="{% url 'detail' pk=mineral.pk %}">{{ mineral.name }}</a>
-<!--			{% if forloop.counter|divisibleby:"3" and not forloop.last %}
-			</div><div class="row">
-			{% endif %}-->
 			</div>
 {% endfor %}
 </div>
