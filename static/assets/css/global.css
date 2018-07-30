@@ -192,7 +192,7 @@ table, p, ul { margin-bottom: 2.5rem; }
 .minerals__random .minerals__anchor { display: inline; color: #fff; padding: 6px 24px 5px 24px; }
 .minerals__random .minerals__anchor:hover { color: #384033; }
 
-.mineral__container { background-color: #fff; border-radius: 6px; list-style: none; padding: 0; text-align: center; margin: 200px 200px 200px 200px; }
+.mineral__container { background-color: #fff; border-radius: 6px; list-style: none; padding: 0; text-align: center; margin: 50px 200px 200px 200px; }
 .mineral__name { display: block; width: 100%; margin: 0; font-size: 24px; padding: 30px 0 30px 0; }
 .mineral__image { display: block; margin: 0 auto; border: solid 2px #CAE5D2; }
 .mineral__image-bg { background-color: #ecfaf8; padding: 20px 0; }

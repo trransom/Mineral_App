@@ -24,5 +24,4 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 	url(r'^minerals/', include('minerals.urls')),
-	url(r'^$', views.hello_world)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
