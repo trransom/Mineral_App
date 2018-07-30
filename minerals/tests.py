@@ -1,3 +1,6 @@
 from django.test import TestCase
+from django.core.urlresolvers import reverse
 
-# Create your tests here.
+class CourseViewsTests(TestCase):
+	def test_index_view(self):
+		resp = self.
