@@ -47,14 +47,16 @@ class CourseViewsTests(TestCase):
 			spec_gravity = ""
 		)
 		
-#	def test_index_view(self):
-#		resp = self.client.get(reverse('minerals:index'))
-#		self.assertEqual(resp.status_code, 200)
-#		self.assertIn(self.mineral, resp.context['minerals'])
-#		self.assertIn(self.mineral2, resp.context['minerals'])
-#		self.assertTemplateUsed(resp, 'minerals/index.html')
-#		
-#	def test_mineral_view(self):
-#		resp = self.client.get(reverse('minerals:detail', kwargs={'pk': self.mineral.pk}))
-#		self.assertEqual(resp.status_code, 200)
-#		self.assertEqual(self.mineral, resp.context['minerals'])
+	def test_index_view(self):
+		'''Tests the index display of the minerals.'''
+		resp = self.client.get(reverse('minerals:index'))
+		self.assertEqual(resp.status_code, 200)
+		self.assertIn(self.mineral, resp.context['minerals'])
+		self.assertIn(self.mineral2, resp.context['minerals'])
+		self.assertTemplateUsed(resp, 'minerals/index.html')
+		
+	def test_mineral_view(self):
+		'''Tests the individual mineral display.'''
+		resp = self.client.get(reverse('minerals:detail', kwargs={'pk': self.mineral.pk}))
+		self.assertEqual(resp.status_code, 200)
+		self.assertEqual(self.mineral, resp.context['mineral'])

@@ -6,7 +6,7 @@
 <div class="minerals__container">
 
 {% for mineral in minerals %}
-		<div class="minerals__anchor"><a href="{% url 'detail' pk=mineral.pk %}">{{ mineral.name }}</a>
+		<div class="minerals__anchor"><a href="{% url 'minerals:detail' pk=mineral.pk %}">{{ mineral.name }}</a>
 			</div>
 {% endfor %}
 </div>
