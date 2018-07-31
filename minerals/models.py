@@ -3,6 +3,9 @@ from django.db import models
 # Create your models here.
 
 class Mineral(models.Model):
+	'''
+		Model for the Mineral relation.
+	'''
 	name = models.CharField(max_length=300, null=True)
 	img_filename = models.CharField(max_length=300, null=True)
 	img_caption = models.CharField(max_length=300, null=True)
