@@ -20,9 +20,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from . import views
-
+app_name='minerals'
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
-	url(r'^minerals/', include('minerals.urls')),
+	url(r'^minerals/', include('minerals.urls', namespace='minerals')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
